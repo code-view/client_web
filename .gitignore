@@ -1,0 +1,6 @@
+node_modules
+.idea
+*.iml
+resources/bundle.js
+resources/ace
+*.log
