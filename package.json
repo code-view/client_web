@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cp node_modules/ace-builds/src-min/ -a resources/ace/ && webpack --progress --colors",
+    "build": "cp node_modules/ace-builds/src-min/ -a resources/ace/ && webpack --progress --colors -p --config ./webpack.production.config.js",
     "develop": "cp node_modules/ace-builds/src/ -a resources/ace/ && webpack-dev-server --progress --colors",
     "test": "jest",
     "watch-test": "jest --verbose --watch"
