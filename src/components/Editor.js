@@ -53,14 +53,9 @@ class Editor extends Component {
   }
 
   componentDidMount() {
-    this.props.updateSession(this.props.id);
+    this.props.subscribe(this.props.id);
     this._editor = ace.edit(this._holder);
     this._editor.setTheme("ace/theme/github");
-
-    this._timer = setInterval(
-      () => this.props.updateSession(this.props.id),
-      100
-    );
   }
 
   componentDidUpdate() {
@@ -79,7 +74,7 @@ class Editor extends Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this._timer);
+    this.props.unsubscribe(this.props.id);
   }
 
   render() {

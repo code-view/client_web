@@ -1,1 +1,3 @@
 export const SESSION_UPDATED = 'SESSION_UPDATED';
+export const SUBSCRIBE = 'SUBSCRIBE';
+export const UNSUBSCRIBE = 'UNSUBSCRIBE';
