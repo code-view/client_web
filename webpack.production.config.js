@@ -7,7 +7,12 @@ module.exports = {
     filename: "bundle.js"
   },
   plugins: [
-    new webpack.DefinePlugin({__DEV__: 'false'})
+    new webpack.DefinePlugin({
+      __DEV__: 'false',
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ],
   module: {
     loaders: [
